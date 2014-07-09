@@ -12,3 +12,7 @@ node_modules
 test/acceptance/tests
 test/acceptance/reports
 test/acceptance/tests_output
+src/course/en/articles.json
+src/course/en/blocks.json
+src/course/en/components.json
+src/course/en/contentObjects.json
