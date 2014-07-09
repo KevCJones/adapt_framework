@@ -1,0 +1,48 @@
+{
+    "_type":"component",
+    "_component":"mcq",
+    "_classes":"",
+    "_layout":"left",
+    "_attempts":1,
+    "_questionWeight":10,
+    "_isRandom":true,
+    "_selectable":3,
+    "title": "Getting involved",
+    "displayTitle": "Getting involved",
+    "body": "How can anyone get involved with Adapt?",
+    "instruction":"Select the correct answers below.",
+    "_items": [
+        {
+            "text": "Sign up to the community site",
+            "_shouldBeSelected":true
+        },
+        {
+            "text": "Contrib to code on Github",
+            "_shouldBeSelected":true
+        },
+        {
+            "text": "Suggest extra features for plugins",
+            "_shouldBeSelected":true
+        }
+    ],
+    "_feedback":{
+        "correct":"That's correct. There are multiple ways of getting involved with Adapt. However signing up to the community site is the best way to see discussions, news and feature requests.",
+        "_incorrect": {
+            "notFinal": "That's not correct. All three answers are correct - There are multiple ways of getting involved with Adapt. However signing up to the community site is the best way to see discussions, news and feature requests.",
+            "final": "Final feedback! That's not correct. All three answers are correct - There are multiple ways of getting involved with Adapt. However signing up to the community site is the best way to see discussions, news and feature requests."
+        },
+        "_partlyCorrect": {
+            "notFinal": "Not quite correct. Actually it's all three answers - There are multiple ways of getting involved with Adapt. However signing up to the community site is the best way to see discussions, news and feature requests.",
+            "final": "Final feedback! Not quite correct. Actually it's all three answers - There are multiple ways of getting involved with Adapt. However signing up to the community site is the best way to see discussions, news and feature requests."
+        }
+    },
+    "_buttons":{
+        "submit":"",
+        "reset":"",
+        "showCorrectAnswer":"",
+        "hideCorrectAnswer":""
+    },
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "_type":"component",
+    "_component":"accordion",
+    "_classes":"",
+    "_layout":"left",
+    "title": "Headlines to grab attention",
+    "displayTitle": "Headlines to grab attention",
+    "body": "The accordion component enables a content creator to pick some catchy titles that reveal more information.",
+    "instruction":" Select the headings below to reveal the text.",
+    "_items": [
+        {
+            "alt": "Missing title and body elements",
+            "title": "Missing title and body elements",
+            "body": "As mentioned before, title and body elements on components are not compulsory. The same is true for articles and blocks."
+        },
+        {
+            "alt": "Use space",
+            "title": "Use space",
+            "body": "One important learning pattern to remember is to not fill every component. This can lead to a poor user experience on smaller screens. We're use to scrolling on smaller devices so use up the vertical space."
+        },
+        {
+            "alt": "Think about background images for decoration",
+            "title": "Think about background images for decoration",
+            "body": "One way of bringing content to life is adding background images to blocks or articles. We suggest doing this after the content is produced so the imagery can aid the learning."
+        }
+    ],
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+}

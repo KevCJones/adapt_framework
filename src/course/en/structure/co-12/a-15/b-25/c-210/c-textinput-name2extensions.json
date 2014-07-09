@@ -1,0 +1,54 @@
+{
+    "_type":"component",
+    "_component":"textinput",
+    "_classes":"",
+    "_layout":"left",
+    "title": "Extensions",
+    "displayTitle": "Extensions",
+    "body": "Name the two extensions being used on this page?",
+    "instruction":"Fill in your answers below.",
+    "_attempts": 1,
+    "placeholder": "Enter answer here",
+    "_allowsAnyOrder": false,
+    "_allowsAnyCase": true,
+    "_allowsPunctuation": true,
+    "_questionWeight":10,
+    "_buttons": {
+        "submit": "",
+        "reset": "",
+        "showCorrectAnswer": "",
+        "hideCorrectAnswer": ""
+    },
+    "_feedback": {
+        "correct": "This feedback will appear if you answered the question correctly.",
+        "_incorrect": {
+            "notFinal": "",
+            "final": "This feedback will appear if you answered the question incorrectly."
+        },
+        "_partlyCorrect": {
+            "notFinal": "",
+            "final": "This feedback will appear if you answered part of the question correctly."
+        }
+    },
+    "_items": [
+        {
+            "prefix": "",
+            "suffix": "",
+            "_answers": [
+                "article assessment",
+                "trickle"
+            ]
+        },
+        {
+            "prefix": "",
+            "suffix": "",
+            "_answers": [
+                "trickle",
+                "article assessment"
+            ]
+        }
+    ],
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+}

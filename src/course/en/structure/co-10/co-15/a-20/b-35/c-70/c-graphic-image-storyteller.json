@@ -1,0 +1,20 @@
+{
+    "_type":"component",
+    "_component":"graphic",
+    "_classes":"",
+    "_layout":"right",
+    "title":"Imagery helps to tell a story",
+    "displayTitle":"Imagery helps to tell a story",
+    "body":"For content that needs a visual effect we have a graphic component. To optimise this for various devices, this  component swaps out images based upon your screen size. Giving the user the best experience possible according to their device's spec.",
+    "instruction":"",
+    "_graphic": {
+        "alt": "alt text",
+        "title": "title text",
+        "large": "course/en/images/origami-menu-two.jpg",
+        "medium": "course/en/images/origami-menu-two.jpg",
+        "small": "course/en/images/origami-menu-two.jpg"
+    },
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+}

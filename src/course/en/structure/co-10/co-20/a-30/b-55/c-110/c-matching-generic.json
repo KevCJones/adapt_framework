@@ -1,0 +1,66 @@
+{
+    "_classes": "",
+    "_layout": "right",
+    "_type":"component",
+    "_component": "matching",
+    "_attempts": 2,
+    "_random": true,
+    "_questionWeight":10,
+    "title": "Matching",
+    "displayTitle": "Matching",
+    "body": "A matching component allows multiple question stems that each have their own individual drop down. All feedback for questions are passed out through an event system so extensions can display feedback how they want. Core comes bundled with a plugin called Tutor.",
+    "instruction":"Match the questions below with the drop down box option.",
+    "_buttons": {
+        "submit": "",
+        "reset": "",
+        "showCorrectAnswer": "",
+        "hideCorrectAnswer": ""
+    },
+    "_feedback": {
+        "correct": "This feedback will appear if you answered the question correctly.",
+        "_incorrect": {
+            "notFinal": "",
+            "final": "This feedback will appear if you answered the question incorrectly."
+        },
+        "_partlyCorrect": {
+            "notFinal": "",
+            "final": "This feedback will appear if you answered part of the question correctly."
+        }
+    },
+    "placeholder": "Select an option",
+    "_items": [
+        {
+            "text": "What is the core bundled feedback extension called?",
+            "_options": [
+                {
+                    "text": "Feedback plugin",
+                    "_isCorrect": false
+                },
+                {
+                    "text": "Tutor",
+                    "_isCorrect": true
+                },
+                {
+                    "text": "Question Feedback",
+                    "_isCorrect": false
+                }
+            ]
+        },
+        {
+            "text": "Can I build another extension to show feedback?",
+            "_options": [
+                {
+                    "text": "Yes",
+                    "_isCorrect": true
+                },
+                {
+                    "text": "No",
+                    "_isCorrect": false
+                }
+            ]
+        }
+    ],
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+}

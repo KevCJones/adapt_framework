@@ -1,0 +1,56 @@
+{
+    "_classes": "",
+    "_type":"component",
+    "_component": "hotgraphic",
+    "_layout": "full",    
+    "title": "Hot graphic",
+    "displayTitle": "Hot graphic",
+    "body": "The hot graphic component enables the learner to interact with an image by clicking on the hot spots to reveal more. This component will scale down to a narrative when viewed on mobile.",
+    "instruction":"Select the hotspots on the image to reveal the text.",
+    "_graphic": {
+        "src": "course/en/images/origami-hotgraphic.jpg",
+        "alt": "alt text",
+        "title": "title"
+    },
+    "_items": [
+        {
+            "title": "Single components",
+            "body": "Single components are interactions that enable two components in a block. These take up half of a blocks width.",
+            "_graphic": {
+                "src": "course/en/images/origami-menu-two.jpg",
+                "alt": "alt text",
+                "title": "title text"
+            },
+            "strapline": "Single components",
+            "_top": 5,
+            "_left": 20
+        },
+        {
+            "title": "Spanned components",
+            "body": "Spanned components are interactions that take up a full block and do not allow another component to sit next to it.",
+            "_graphic": {
+                "src": "course/en/images/origami-menu-three.jpg",
+                "alt": "alt text",
+                "title": "title text"
+            },
+            "strapline": "Spanned components",
+            "_top": 25,
+            "_left": 60
+        },
+        {
+            "title": "Single and Spanned components",
+            "body": "Some components are both single and spanned. This means they can sit with another component or fill a whole block. Some exmaples are: Graphic, Text and Media",
+            "_graphic": {
+                "src": "course/en/images/origami-menu-one.jpg",
+                "alt": "alt text",
+                "title": "title text"
+            },
+            "strapline": "Single and Spanned components",
+            "_top": 85,
+            "_left": 40
+        }
+    ],
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+}

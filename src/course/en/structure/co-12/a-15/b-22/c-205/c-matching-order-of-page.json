@@ -1,0 +1,87 @@
+{
+    "_classes": "",
+    "_layout": "right",
+    "_type":"component",
+    "_component": "matching",
+    "_attempts": 1,
+    "_random": true,
+    "_questionWeight":10,
+    "title": "Order of a page",
+    "displayTitle": "Order of a page",
+    "body": "Put in order, the elements as they are viewed in a standard Adapt page",
+    "instruction":"Select an options from the drop down list",
+    "_buttons": {
+        "submit": "",
+        "reset": "",
+        "showCorrectAnswer": "",
+        "hideCorrectAnswer": ""
+    },
+    "_feedback": {
+        "correct": "That's correct. Think A, B, C when creating Adapt courses.",
+        "_incorrect": {
+            "notFinal": "NOT FINAL This feedback will appear if you answered the question incorrectly.",
+            "final": "FINAL This feedback will appear if you answered the question incorrectly."
+        },
+        "_partlyCorrect": {
+            "notFinal": "NON-FINAL! This feedback will appear if you answered part of the question correctly.",
+            "final": "FINAL! This feedback will appear if you answered part of the question correctly."
+        }
+    },
+    "placeholder": "select an option",
+    "_items": [
+        {
+            "text": "First element",
+            "_options": [
+                {
+                    "text": "Component",
+                    "_isCorrect": false
+                },
+                {
+                    "text": "Article",
+                    "_isCorrect": true
+                },
+                {
+                    "text": "Block",
+                    "_isCorrect": false
+                }
+            ]
+        },
+        {
+            "text": "Second element",
+            "_options": [
+                {
+                    "text": "Component",
+                    "_isCorrect": false
+                },
+                {
+                    "text": "Article",
+                    "_isCorrect": false
+                },
+                {
+                    "text": "Block",
+                    "_isCorrect": true
+                }
+            ]
+        },
+        {
+            "text": "Third element",
+            "_options": [
+                {
+                    "text": "Component",
+                    "_isCorrect": true
+                },
+                {
+                    "text": "Article",
+                    "_isCorrect": false
+                },
+                {
+                    "text": "Block",
+                    "_isCorrect": false
+                }
+            ]
+        }
+    ],
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+}

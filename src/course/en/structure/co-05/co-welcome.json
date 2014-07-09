@@ -1,0 +1,13 @@
+{
+    "_type":"page",
+    "_classes":"",
+    "title":"Welcome to Adapt Learning",
+    "displayTitle":"Welcome to Adapt Learning",
+    "body":"!inject:co-welcome.body.html!",
+    "_graphic": {
+        "alt": "Welcome to Adapt Learning",
+        "src": "course/en/images/origami-menu-one.jpg"
+    },
+    "linkText":"View",
+    "duration":"2 mins"
+}

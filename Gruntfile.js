@@ -211,13 +211,14 @@ module.exports = function(grunt) {
             },
             courseJson: {
                 files: [
-                    'src/course/**/*.json'
+                    'src/course/**/*.json',
+                    '!src/course/*/structure/**/*.json'
                 ],
                 tasks : ['jsonlint', 'copy:courseJson']
             },
             courseAssets: {
                 files: [
-                    'src/course/**/*', '!src/course/**/*.json'
+                    'src/course/**/*', '!src/course/**/*.json',"!src/course/*/structure/**/*.html"
                 ],
                 tasks : ['copy:courseAssets']
             },
@@ -243,6 +244,12 @@ module.exports = function(grunt) {
                     'src/components/**/assets/**'
                 ],
                 tasks: ['copy:main']
+            },
+            structure: { // NB : Mavericks limit is low - terminal $ launchctl limit maxfiles 2048 2048 && ulimit -n 2048 if you get the limit warning
+                files: [
+                    'src/course/*/structure/**/*.{html,json}',
+                ],
+                tasks: ['create-json-from-structure']
             }
         },
         
@@ -294,6 +301,154 @@ module.exports = function(grunt) {
     });
     
     grunt.loadNpmTasks('grunt-contrib-concat');
+
+    // This is a simple function to take the course's config.json and append the theme.json
+    grunt.registerTask('create-json-from-structure', 'Creating json files', function() {
+
+        var _ = require('underscore');
+        var path = require('path');
+        var contentObjectArray = [];
+        var articlesArray = [];
+        var blocksArray = [];
+        var componentsArray = [];
+
+        //regular expressions - we assume a folder naming convention, as in adapts demo
+        var contentObj_re = new RegExp("^co-", "i");
+        var article_re = new RegExp("^a-", "i");
+        var block_re = new RegExp("^b-", "i");
+        var component_re = new RegExp("^c-", "i");
+        var all_re = [contentObj_re,article_re,block_re,component_re];
+        
+        //recurse through the structure folder
+        //track the folder name and detect type, read the json file and build the final ones
+        var isValidFolderName = function(folderName) {
+            
+            var match = false;
+            for(var i; i <all_re.length; i++)
+                if(re.test(str))
+                {
+                    match = true;
+                    break;
+                }
+            
+            return match?i:-1;
+        }
+
+        //walk backwards in the directories for a valid folder, allows for sub foldering certain elements later
+        var getValidParent = function(folderArray)
+        {
+            for(var i = folderArray.length-1; i >= 0; i--)
+            {
+                var folder = folderArray[i];
+                if(isValidFolderName(folder))
+                    return folder;
+            }
+
+            return "course";
+
+        }
+
+        //replaces a JSON inject with the the file it asked us to inject e.g !inject:body.html! will 
+        //load, minify and replace that line with the html content of body.html
+        var runInjects = function(obj,subdir){
+
+            var inject_re = /\!inject:(.*)\!/;
+            //called with every property and it's value
+            function process(key,value) {
+                if(_.isString(value))
+                {
+                    var file = value.match(inject_re);
+                    if(file && file[1])
+                    {
+                        var str = grunt.file.read(subdir+file[1])
+                        if(str)
+                            obj[key] = str.replace(/\n|\t/g, ''); //remove white spacing characters 
+                        else
+                            grunt.fail.fatal("Oops, i tried to inject a file that was missing? " + subdir+file[1]);
+                    }
+                }
+            }
+
+            function traverse(o,func) {
+                for (var i in o) {
+                    func.apply(this,[i,o[i]]);  
+                    if (o[i] !== null && typeof(o[i])=="object") {
+                        //going on step down in the object tree!!
+                        traverse(o[i],func);
+                    }
+                }
+            }
+
+            traverse(obj,process);
+
+        };
+
+        //make sure we're using the current default language then recurse the folder we built up
+        var configJson = grunt.file.readJSON('src/course/config.json');
+        var language = configJson._defaultLanguage;
+        grunt.file.recurse('src/course/'+language+'/structure', function(abspath, rootdir, subdir, filename) {
+            
+            //only care about JSON stubs 
+            if(path.extname(filename) == ".json")
+            {
+                var folders = subdir.split('/'),
+                    parentName = null,
+                    myName = null;
+
+                if(folders.length > 1) // has a parent
+                    parentName = folders[folders.length-2];
+                myName = getValidParent(folders);
+                    
+                //Get the json now so we can edit as needed
+                var jsonObject = grunt.file.readJSON(abspath);
+
+                //update my parent and id as its assumed i'm in the folder of my name
+                jsonObject["_parentId"] = parentName || "course"; // root nodes are course nodes
+                jsonObject["_id"] = myName;
+
+                //check for any injects
+                runInjects(jsonObject,rootdir+'/'+subdir+'/');
+
+                if(contentObj_re.test(myName)) contentObjectArray.push(jsonObject);
+                else if(article_re.test(myName)) articlesArray.push(jsonObject);
+                else if(block_re.test(myName)) blocksArray.push(jsonObject); 
+                else if(component_re.test(myName)) componentsArray.push(jsonObject); 
+            }
+                
+
+        });
+
+        var outputArray = [];
+        
+        //Content Object Array Saved to JSON
+        contentObjectArray.forEach(function(item){
+            outputArray.push(JSON.stringify(item,null,3));
+        });
+        grunt.file.write('src/course/en/contentObjects.json', "[\n"+outputArray+"\n]");
+
+        //Articles Object Array Saved
+        outputArray = [];
+        articlesArray.forEach(function(item){
+            outputArray.push(JSON.stringify(item,null,3));
+        });
+        grunt.file.write('src/course/en/articles.json', "[\n"+outputArray+"\n]");
+
+        //Save Block Array to JSON
+        outputArray = [];
+        blocksArray.forEach(function(item){
+            outputArray.push(JSON.stringify(item,null,3));
+        });
+        grunt.file.write('src/course/en/blocks.json', "[\n"+outputArray+"\n]");
+
+        //Save Components Array to JSON
+        outputArray = [];
+        componentsArray.forEach(function(item){
+            outputArray.push(JSON.stringify(item,null,3));
+        });
+        grunt.file.write('src/course/en/components.json', "[\n"+outputArray+"\n]");
+
+
+    });
 
     // This is a simple function to take the course's config.json and append the theme.json
     grunt.registerTask('create-json-config', 'Creating config.json', function() {
@@ -437,7 +592,7 @@ module.exports = function(grunt) {
     grunt.registerTask('server', ['concurrent:server']);
     grunt.registerTask('server-scorm', ['concurrent:spoor']);
     grunt.registerTask('build', ['jsonlint', 'check-json', 'copy', 'concat', 'less', 'handlebars', 'bower', 'requirejs-bundle', 'requirejs:compile', 'create-json-config']);
-    grunt.registerTask('dev', ['jsonlint', 'copy', 'concat', 'less', 'handlebars', 'bower', 'requirejs-bundle', 'requirejs:dev', 'create-json-config', 'watch']);
+    grunt.registerTask('dev', ['jsonlint', 'copy', 'concat', 'less', 'handlebars', 'bower', 'requirejs-bundle', 'requirejs:dev', 'create-json-from-structure', 'create-json-config', 'watch']);
     
     grunt.registerTask('acceptance',['compile', 'concurrent:selenium']);
 

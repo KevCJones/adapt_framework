@@ -1,0 +1,13 @@
+{
+    "_type":"page",
+    "_classes":"",
+    "title":"Question components",
+    "displayTitle":"Question components",
+    "body":"These components are used to test the learners ability and understanding of a course/piece of learning.",
+    "_graphic": {
+        "alt": "Question components",
+        "src": "course/en/images/origami-menu-one.jpg"
+    },
+    "linkText":"View",
+    "duration":"2 mins"
+}

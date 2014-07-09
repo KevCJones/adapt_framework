@@ -1,0 +1,13 @@
+{
+    "_type":"component",
+    "_component":"text",
+    "_classes":"",
+    "_layout":"left",
+    "title":"Our first look at a component",
+    "displayTitle":"Our first look at a component",
+    "body":"!inject:c-markedup-body.html!",
+    "instruction":"",
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+}

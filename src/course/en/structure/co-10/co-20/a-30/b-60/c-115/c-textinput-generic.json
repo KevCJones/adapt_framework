@@ -1,0 +1,48 @@
+{
+    "_type":"component",
+    "_component":"textinput",
+    "_classes":"",
+    "_layout":"left",
+    "title": "Text input",
+    "displayTitle": "Text input",
+    "body": "Text input allows the learner to input a text field into one of the items. This component can check whether you need items to be case sensitive, allow punctuation and allow items to be inserted in any order.",
+    "instruction":"Name one type of plugin Adapt supports?",
+    "_attempts": 1,
+    "placeholder": "Enter answer here",
+    "_allowsAnyOrder": false,
+    "_allowsAnyCase": true,
+    "_allowsPunctuation": false,
+    "_questionWeight":10,
+    "_buttons": {
+        "submit": "",
+        "reset": "",
+        "showCorrectAnswer": "",
+        "hideCorrectAnswer": ""
+    },
+    "_feedback": {
+        "correct": "That's correct. Adapt allows the following plugins: A theme, components, extensions and a menu",
+        "_incorrect": {
+            "notFinal": "",
+            "final": "This feedback will appear if you answered the question incorrectly."
+        },
+        "_partlyCorrect": {
+            "notFinal": "",
+            "final": "This feedback will appear if you answered part of the question correctly."
+        }
+    },
+    "_items": [
+        {
+            "prefix": "Plugin:",
+            "suffix": "",
+            "_answers": [
+                "theme",
+                "menu",
+                "extension",
+                "component"
+            ]
+        }
+    ],
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+}

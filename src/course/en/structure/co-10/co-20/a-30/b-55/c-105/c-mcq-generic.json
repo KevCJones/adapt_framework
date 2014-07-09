@@ -1,0 +1,48 @@
+{
+    "_type":"component",
+    "_component":"mcq",
+    "_classes":"",
+    "_layout":"left",
+    "_attempts":1,
+    "_questionWeight":1,
+    "_isRandom":true,
+    "_selectable":1,
+    "title": "MCQ",
+    "displayTitle": "MCQ",
+    "body": "A multiple choice question items each have a text attribute and whether the item is correct. An MCQ can also set the items to display in a random order and allow multiple items to be selected.",
+    "instruction":"What does MCQ standard for? Select an item below and click submit.",
+    "_items": [
+        {
+            "text": "Magical choosing question",
+            "_shouldBeSelected":false
+        },
+        {
+            "text": "Multiple choice question",
+            "_shouldBeSelected":true
+        },
+        {
+            "text": "Machine coded quote",
+            "_shouldBeSelected":false
+        }
+    ],
+    "_feedback": {
+        "correct": "This feedback will appear if you answered the question correctly.",
+        "_incorrect": {
+            "notFinal": "",
+            "final": "This feedback will appear if you answered the question incorrectly."
+        },
+        "_partlyCorrect": {
+            "notFinal": "",
+            "final": "This feedback will appear if you answered part of the question correctly."
+        }
+    },
+    "_buttons": {
+        "submit": "",
+        "reset": "",
+        "showCorrectAnswer": "",
+        "hideCorrectAnswer": ""
+    },
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+}

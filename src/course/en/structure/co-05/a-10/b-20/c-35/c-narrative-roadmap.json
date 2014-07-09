@@ -1,0 +1,45 @@
+{
+    "_type":"component",
+    "_classes": "",
+    "_layout": "full",
+    "_component": "narrative",
+    "title": "What’s coming next?",
+    "displayTitle": "What’s coming next?",
+    "body": "Find out what’s on the roadmap for 2014 for Adapt Learning.",
+    "instruction":"",
+    "_items": [
+        {
+            "title": "Improvements",
+            "body": "Over the next few months we’ll be working on a number of developments to improve Adapt Learning to ensure it’s the leading elearning framework for responsive content. At the heart of these developments are two key pieces of work.",
+            "_graphic": {
+                "src": "course/en/images/narrative.png",
+                "alt": "alt text",
+                "title": "title text"
+            },
+            "strapline": "Improvements"
+        },
+        {
+            "title": "1: Plug-in Friendly Architecture",
+            "body": "We’re in the process of reworking the codebase to ensure a plugin friendly approach. This will help us to establish an extensive and vibrant open source community to support the framework and adhere to the principles of collaborative development.",
+            "_graphic": {
+                "src": "course/en/images/narrative_1.png",
+                "alt": "alt text",
+                "title": "title text"
+            },
+            "strapline": "1: Plug-in Friendly Architecture"
+        },
+        {
+            "title": "2: Authoring Tool",
+            "body": "We’re also creating an authoring tool to allow non-technical users to create fully featured Adapt elearning courses. The authoring tool will be simple enough for novices to use yet powerful enough to meet the needs of the elearning professional.",
+            "_graphic": {
+                "src": "course/en/images/narrative_2.png",
+                "alt": "alt text",
+                "title": "title text"
+            },
+            "strapline": "2: Authoring Tool"
+        }
+    ],
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+}

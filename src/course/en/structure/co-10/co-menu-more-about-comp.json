@@ -1,0 +1,13 @@
+{
+    "_type":"menu",
+    "_classes":"",
+    "title":"Want to know more about our components",
+    "displayTitle":"Want to know more about our components",
+    "body":"Adapt's power comes from being able to switch out and mix 'n' match components. Some span the whole page, whilst others are single width. We've split the presentation and question components to give you a better overview of Adapt. Select an option below to read more.",
+    "_graphic": {
+        "alt": "Want to know more about our components",
+        "src": "course/en/images/origami-menu-two.jpg"
+    },
+    "linkText":"View",
+    "duration":"2 mins"
+}

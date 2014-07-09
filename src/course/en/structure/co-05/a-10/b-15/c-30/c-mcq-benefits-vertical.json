@@ -1,0 +1,52 @@
+{
+    "_type":"component",
+    "_component":"mcq",
+    "_classes":"",
+    "_layout":"right",
+    "_attempts":2,
+    "_questionWeight":1,
+    "_isRandom":true,
+    "_selectable":4,
+    "title": "Key benefits of a vertical scrolling approach",
+    "displayTitle": "Key benefits of a vertical scrolling approach",
+    "body": "Can you identify a few of the benefits that a vertical scrolling approach offers over the traditional back and next approach?",
+    "instruction":"Select one or more options from the list below and select Submit.",
+    "_items": [
+        {
+            "text": "Vertical scrolling as a means of navigation on the web is common place and therefore familiar to users",
+            "_shouldBeSelected":true
+        },
+        {
+            "text": "Placing scrolling at the heart of your approach means designs are more mobile friendly",
+            "_shouldBeSelected":true
+        },
+        {
+            "text": "It reduces the need for unnecessary navigation as pages can be as long as they need to be",
+            "_shouldBeSelected":true
+        },
+        {
+            "text": "It means that you no longer need to first gain your learners' attention",
+            "_shouldBeSelected":false
+        }
+    ],
+    "_feedback":{
+        "correct": "That’s correct. Your users are almost certainly using vertical scrolling whenever they interact with the web so why reinvent the wheel? Scrolling is also a given when viewing content on a smartphone so any page which is structured with this in mind will help make the design and its navigation feel well thought through for mobile. Clustering related content within a single page should definitely reduce the need to navigate to a different page, as well as that repetitive ‘Click next to continue’ instruction as well.<br><br>Of course, we should always try to gain the learners attention early on the page, it’s just that now, when we have it, we aren’t asking them to go somewhere else. The design challenge is now to give them a reason to scroll and venture down ‘below the fold’.  To continue close this tutor pop-up.",
+        "_incorrect": {
+            "notFinal": "Sorry, that’s not right. Your users are almost certainly using vertical scrolling whenever they interact with the web so why reinvent the wheel? Scrolling is also a given when viewing content on a smartphone so any page which is structured with this in mind will help make the design and its navigation feel well thought through for mobile. Clustering related content within a single page should definitely reduce the need to navigate to a different page, as well as that repetitive ‘Click next to continue’ instruction as well.<br><br>Of course, we should always try to gain the learners attention early on the page, it’s just that now, when we have it, we aren’t asking them to go somewhere else. The design challenge is now to give them a reason to scroll and venture down ‘below the fold’.  To continue close this tutor pop-up.",
+            "final": "Final feedback! Sorry, that’s not right. Your users are almost certainly using vertical scrolling whenever they interact with the web so why reinvent the wheel? Scrolling is also a given when viewing content on a smartphone so any page which is structured with this in mind will help make the design and its navigation feel well thought through for mobile. Clustering related content within a single page should definitely reduce the need to navigate to a different page, as well as that repetitive ‘Click next to continue’ instruction as well.<br><br>Of course, we should always try to gain the learners attention early on the page, it’s just that now, when we have it, we aren’t asking them to go somewhere else. The design challenge is now to give them a reason to scroll and venture down ‘below the fold’.  To continue close this tutor pop-up."
+        },
+        "_partlyCorrect": {
+            "notFinal": "That’s not quite right. Your users are almost certainly using vertical scrolling whenever they interact with the web so why reinvent the wheel? Scrolling is also a given when viewing content on a smartphone so any page which is structured with this in mind will help make the design and its navigation feel well thought through for mobile. Clustering related content within a single page should definitely reduce the need to navigate to a different page, as well as that repetitive ‘Click next to continue’ instruction as well.<br><br>Of course, we should always try to gain the learners attention early on the page, it’s just that now, when we have it, we aren’t asking them to go somewhere else. The design challenge is now to give them a reason to scroll and venture down ‘below the fold’.  To continue close this tutor pop-up.",
+            "final": "Final feedback! That’s not quite right. Your users are almost certainly using vertical scrolling whenever they interact with the web so why reinvent the wheel? Scrolling is also a given when viewing content on a smartphone so any page which is structured with this in mind will help make the design and its navigation feel well thought through for mobile. Clustering related content within a single page should definitely reduce the need to navigate to a different page, as well as that repetitive ‘Click next to continue’ instruction as well.<br><br>Of course, we should always try to gain the learners attention early on the page, it’s just that now, when we have it, we aren’t asking them to go somewhere else. The design challenge is now to give them a reason to scroll and venture down ‘below the fold’.  To continue close this tutor pop-up."
+        }
+    },
+    "_buttons": {
+        "submit": "",
+        "reset": "",
+        "showCorrectAnswer": "",
+        "hideCorrectAnswer": ""
+    },
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+}

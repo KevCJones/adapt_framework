@@ -1,0 +1,38 @@
+{
+    "_type":"article",
+    "_classes":"image-1",
+    "title":"A quick assessment with step locking",
+    "displayTitle":"A quick assessment with step locking", 
+    "body":"Three plugins come bundled with Adapt's core. Tutor - the feedback popup, Article Assessment - an assessment based upon one article and Trickle - vertical step locking. Have a go at the questions below to see these plugins in action.",
+    "_trickle": {
+        "_isEnabled":true,
+        "button": "Continue to next question?"
+    },
+    "_assessment": {
+        "_isEnabled": true,
+        "_isPercentageBased" : true,
+        "_scoreToPass" : 75,
+        "_completionMessage" : {
+            "title" : "You have finished the assessment",
+            "message": "You scored [SCORE] out of [MAXSCORE].  [FEEDBACK]"
+        },
+        "_bands": [
+            {
+                "_score": 0,
+                "feedback": "You're score was below 25%. Why not have another try?"
+            },
+            {
+                "_score": 25,
+                "feedback": "You're score was below 50%. Why not have another try?"
+            },
+            {
+                "_score": 50,
+                "feedback": "Good effort, but you're score was under 75%. Let's try again?"
+            },
+            {
+                "_score": 75,
+                "feedback": "Great work. You passed the assessment article quiz."
+            }
+        ]
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "_classes": "",
+    "_type":"component",
+    "_layout": "full",
+    "_component": "narrative",
+    "title": "Narrative",
+    "displayTitle": "Narrative",
+    "body": "This is optional body text.",
+    "instruction":"Select the forward arrows to move through the narrative on a desktop, or swipe the images and select the plus icons to do so on mobile.",
+    "_items": [
+        {
+            "title": "Tell a story",
+            "body": "Narratives should be used to tell a story or to help learners with a process that needs to be in order.",
+            "_graphic": {
+                "src": "course/en/images/origami-menu-one.jpg",
+                "alt": "Origami birds",
+                "title": ""
+            },
+            "strapline": "Tell a story"
+        },
+        {
+            "title": "Optimised for touch events",
+            "body": "The narrative was built with touch devices in mind - so you can swipe through the images if you device is touch enabled.",
+            "_graphic": {
+                "src": "course/en/images/origami-menu-two.jpg",
+                "alt": "Origami birds",
+                "title": ""
+            },
+            "strapline": "Optimised for touch events"
+        },
+        {
+            "title": "How a narrative looks on mobile",
+            "body": "If viewing on desktop or tablet, this text will appear to the right of the image. On mobile, you’ll need to select the plus icon to reveal this text.",
+            "_graphic": {
+                "src": "course/en/images/origami-menu-three.jpg",
+                "alt": "Origami birds",
+                "title": ""
+            },
+            "strapline": "How a narrative looks on mobile"
+        }
+    ],
+    "_pageLevelProgress": {
+        "_isEnabled": true
+    }
+}

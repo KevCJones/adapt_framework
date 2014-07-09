@@ -1,0 +1,19 @@
+{
+    "_type":"component",
+    "_component":"media",
+    "_classes":"",
+    "_layout":"right",
+    "title":"Media component",
+    "displayTitle":"<br>",
+    "body": "",
+    "instruction":"",
+    "_setCompletionOn":"play",
+    "_media": {
+        "mp4": "course/en/video/big_buck_bunny.mp4",
+        "ogv": "course/en/video/big_buck_bunny.ogv",
+        "poster": "course/en/video/big_buck_bunny-small.jpg"
+    },
+    "_pageLevelProgress": {
+        "_isEnabled": false
+    }
+}
