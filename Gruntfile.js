@@ -354,7 +354,7 @@ module.exports = function(grunt) {
 
             var inject_re = /\!inject:(.*)\!/;
             //called with every property and it's value
-            function process(key,value) {
+            function process(innerObj,key,value) {
                 if(_.isString(value))
                 {
                     var file = value.match(inject_re);
@@ -362,7 +362,7 @@ module.exports = function(grunt) {
                     {
                         var str = grunt.file.read(subdir+file[1])
                         if(str)
-                            obj[key] = str.replace(/\n|\t/g, ''); //remove white spacing characters 
+                            innerObj[key] = str.replace(/\n|\t/g, ''); //remove white spacing characters 
                         else
                             grunt.fail.fatal("Oops, i tried to inject a file that was missing? " + subdir+file[1]);
                     }
@@ -371,7 +371,7 @@ module.exports = function(grunt) {
 
             function traverse(o,func) {
                 for (var i in o) {
-                    func.apply(this,[i,o[i]]);  
+                    func.apply(this,[o,i,o[i]]);  
                     if (o[i] !== null && typeof(o[i])=="object") {
                         //going on step down in the object tree!!
                         traverse(o[i],func);
